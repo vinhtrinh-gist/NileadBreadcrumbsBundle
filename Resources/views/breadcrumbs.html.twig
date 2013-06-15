@@ -1,0 +1,5 @@
+<ul class="breadcrumb">
+    {% for item in breadcrumbs.retrieve() %}
+        {% include "NileadBreadcrumbsBundle::_item.html.twig" %}
+    {% endfor %}
+</ul>

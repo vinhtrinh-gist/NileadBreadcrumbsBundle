@@ -1,0 +1,32 @@
+{
+    "name": "nilead/breadcrumbs-bundle",
+    "type": "symfony-bundle",
+    "description": "A simple breadcrumbs bundle for Nilead project.",
+    "keywords": ["shop", "ecommerce", "products", "product"],
+    "homepage": "http://nilead.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vinh Trinh",
+            "email": "vinhtrinh@rubikin.com",
+            "homepage": "http://rubikin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.2,<2.3-dev",
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Nilead\\BreadcrumbsBundle": "" }
+    },
+    "target-dir": "Nilead/BreadcrumbsBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.1.x-dev"
+        }
+    }
+}

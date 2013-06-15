@@ -1,0 +1,19 @@
+<li>
+    {%- if item.hasUrl() and not loop.last -%}
+        <a href="{{ item.url }}">
+    {%- else -%}
+        <span>
+    {%- endif -%}
+
+    {{- item.title|trans -}}
+
+    {%- if item.hasUrl() and not loop.last -%}
+        </a>
+    {%- else -%}
+        </span>
+    {%- endif -%}
+
+    {% if not loop.last %}
+    <span class="divider">/</span>
+    {% endif %}
+</li>

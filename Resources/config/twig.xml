@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+
+<!--
+    Created by Rubikin Team.
+    ========================
+    Date: 2013-06-13
+    Time: 22:02:57
+
+    Question? Come to our website at http://rubikin.com
+    For the full copyright and license information, please view the LICENSE
+    file that was distributed with this source code.
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="nilead.extension.breadcrumbs.class">Nilead\BreadcrumbsBundle\Twig\BreadcrumbsExtension</parameter>
+        <parameter key="nilead.templating.breadcrumbs.class">Nilead\BreadcrumbsBundle\Templating\BreadcrumbsTemplate</parameter>
+    </parameters>
+
+    <services>
+        <service id="nilead.templating.breadcrumbs" class="%nilead.templating.breadcrumbs.class%">
+            <argument type="service" id="templating" />
+            <argument type="service" id="nilead.model.breadcrumbs" />
+            <argument>%nilead.options.breadcrumbs%</argument>
+
+            <tag name="templating.helper" alias="breadcrumbs" />
+        </service>
+
+        <service id="nilead.extension.breadcrumbs" class="%nilead.extension.breadcrumbs.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="nilead.templating.breadcrumbs" />
+
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
+</container>
