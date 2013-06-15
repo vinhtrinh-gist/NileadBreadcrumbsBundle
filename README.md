@@ -1,7 +1,7 @@
 NileadBreadcrumbsBundle
 =======================
 
-Products management for Nilead with support for variants, options, properties and handy prototypes.
+A simple breadcrumbs bundle for Nilead project.
 
 Documents
 ---------
